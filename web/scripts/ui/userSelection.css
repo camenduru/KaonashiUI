@@ -1,0 +1,135 @@
+.kaonashi-user-selection {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    background: linear-gradient(var(--tr-even-bg-color), var(--tr-odd-bg-color));
+}
+
+.kaonashi-user-selection-inner {
+    background: var(--kaonashi-menu-bg);
+    margin-top: -30vh;
+    padding: 20px 40px;
+    border-radius: 10px;
+    min-width: 365px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.kaonashi-user-selection-inner form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.kaonashi-user-selection-inner h1 {
+    margin: 10px 0 30px 0;
+    font-weight: normal;
+}
+
+.kaonashi-user-selection-inner label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.kaonashi-user-selection input,
+.kaonashi-user-selection select {
+    background-color: var(--kaonashi-input-bg);
+    color: var(--input-text);
+    border: 0;
+    border-radius: 5px;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+.kaonashi-user-selection input::placeholder {
+    color: var(--descrip-text);
+    opacity: 1;
+}
+
+.kaonashi-user-existing {
+    width: 100%;
+}
+
+.no-users .kaonashi-user-existing {
+    display: none;
+}
+
+.kaonashi-user-selection-inner .or-separator {
+    margin: 10px 0;
+    padding: 10px;
+    display: block;
+    text-align: center;
+    width: 100%;
+    color: var(--descrip-text);
+}
+
+.kaonashi-user-selection-inner .or-separator {
+    overflow: hidden;
+    text-align: center;
+    margin-left: -10px;
+}
+
+.kaonashi-user-selection-inner .or-separator::before,
+.kaonashi-user-selection-inner .or-separator::after {
+    content: "";
+    background-color: var(--border-color);
+    position: relative;
+    height: 1px;
+    vertical-align: middle;
+    display: inline-block;
+    width: calc(50% - 20px);
+    top: -1px;
+}
+
+.kaonashi-user-selection-inner .or-separator::before {
+    right: 10px;
+    margin-left: -50%;
+}
+
+.kaonashi-user-selection-inner .or-separator::after {
+    left: 10px;
+    margin-right: -50%;
+}
+
+.kaonashi-user-selection-inner section {
+    width: 100%;
+    padding: 10px;
+    margin: -10px;
+    transition: background-color 0.2s;
+}
+
+.kaonashi-user-selection-inner section.selected {
+    background: var(--border-color);
+    border-radius: 5px;
+}
+
+.kaonashi-user-selection-inner footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.kaonashi-user-selection-inner .kaonashi-user-error {
+    color: var(--error-text);
+    margin-bottom: 10px;
+}
+
+.kaonashi-user-button-next {
+    font-size: 16px;
+    padding: 6px 10px;
+    width: 100px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+}
